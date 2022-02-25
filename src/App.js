@@ -8,9 +8,6 @@ import "./style.css";
 const App = () => {
   console.log(process.env);
   return (
-    <div>
-      Hello
-    </div>
     // <Router>
     
     //   <Responsive displayIn={["Tablet","Mobile"]}>
@@ -26,6 +23,7 @@ const App = () => {
 
 
     // </Router>
+    <div>Hello</div>
   );
 };
 
