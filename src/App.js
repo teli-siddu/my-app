@@ -8,24 +8,21 @@ import "./style.css";
 const App = () => {
   console.log(process.env);
   return (
-    <div>
-      Hello
-    </div>
-    // <Router>
+    <Router>
     
-    //   <Responsive displayIn={["Tablet","Mobile"]}>
-    //     <div className="ss-navbar-container">
-    //       <NavbarContainer />
-    //     </div>
-    //   </Responsive>
-    //   <Responsive displayIn={["Laptop"]}>
-    //     <div className="mm-navbar-container">
-    //       <TopNavbarContainer />
-    //     </div>
-    //   </Responsive>
+      <Responsive displayIn={["Tablet","Mobile"]}>
+        <div className="ss-navbar-container">
+          <NavbarContainer />
+        </div>
+      </Responsive>
+      <Responsive displayIn={["Laptop"]}>
+        <div className="mm-navbar-container">
+          <TopNavbarContainer />
+        </div>
+      </Responsive>
 
 
-    // </Router>
+    </Router>
   );
 };
 
