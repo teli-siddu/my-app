@@ -1,4 +1,6 @@
-
+.in-visible{
+    visibility: hidden;
+}
 .mm-navbar-container .navbar{
     height: var(--nav-size);
     background-color: var(--nav-bg);
@@ -6,13 +8,23 @@
     border-bottom: var(--border);
     color:rgb(243, 243, 243);
     font-size: calc(var(--font-size)*1.6);
+   
 }
 .mm-navbar-container .navbar-nav{
     max-width: 100%;
     height: 100%;
     display: flex;
     justify-content: start;
-align-items: center;
+    align-items: center;
+}
+.mm-navbar-container .wrapper{
+    display: flex;
+    overflow: hidden;
+   padding: 0 20px;
+    width: 75%;
+    height: inherit;
+    align-items: center;
+    
 }
 .mm-navbar-container .nav-dropdown-items{
     position: absolute;
@@ -32,6 +44,7 @@ padding: 1.8rem 1.5rem;
 border-bottom: var(--border);
 width: 25rem;
 
+
 }
 .mm-navbar-container .nav-item:hover{
     background-color: #8b6f4e;
@@ -43,6 +56,12 @@ width: 25rem;
 .mm-navbar-container .nav-dropdown {
     color: var(--nav-text-color);
     padding: 0px calc(var(--nav-size)*0.25);
+    white-space: nowrap;
+}
+.mm-navbar-container .nav-menu-items-overflow{
+    position: absolute;
+    right: 0;
+    top:0;
 }
 
 .nav-dropdown-items::before{
@@ -90,7 +109,7 @@ top: -1.4rem;
    .nav-dropdown-title,.nav-item{
        cursor: pointer;
    }
-@media screen and (max-width:991px) {
+@media screen and (max-width:900px) {
     
 .ss-navbar-container .navbar{
     height: var(--nav-size);

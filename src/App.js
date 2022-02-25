@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavbarContainer from "./components/common/NavbarContainer";
 import TopNavbarContainer from './components/common/TopNavbarContainer'
 import { BrowserRouter as Router } from "react-router-dom";
@@ -6,9 +6,26 @@ import {Responsive} from './components/common/Responsive'
 import "./style.css";
 // import Header from "./components/common/Header";
 const App = () => {
+  console.log(process.env);
   return (
-   
-    <div>Hello</div>
+    <Router>
+    
+      <Responsive displayIn={["Mobile"]}>
+        <div className="ss-navbar-container">
+          <NavbarContainer />
+        </div>
+      </Responsive>
+      <Responsive displayIn={["Mobile","Tablet","Laptop"]}>
+        <div className="mm-navbar-container">
+              <TopNavbarContainer />
+        </div>
+      </Responsive>
+    
+
+    </Router>
+
+    
+    
   );
 };
 

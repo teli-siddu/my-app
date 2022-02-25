@@ -1,5 +1,4 @@
 import { useState,useEffect,useRef } from 'react';
-import {useOutsideAlerter} from '../../hooks/useOutsideAlerter'
 
 export const Navbar = (props) => {
     return (
@@ -38,18 +37,18 @@ export const NavDropdown=(props)=>{
 
 
 
-    function NavDropdownItem(props){
-        return (
-            <div className="nav-dropdown-item" >
-            {props.children}
-           </div>
-        )
-    }
+    // function NavDropdownItem(props){
+    //     return (
+    //         <div className="nav-dropdown-item" >
+    //         {props.children}
+    //        </div>
+    //     )
+    // }
     return (
          <>
            {/* {alert(clickedOutside)} */}
-            <div className='nav-dropdown '>
-                <div onClick={()=>{setOpen(!open)}} className="nav-dropdown-title">{props.title}</div>
+            <div className={`nav-dropdown ${props.className}`} data-target-id={props.targetId}>
+                <div onClick={()=>{setOpen(!open)}} className="nav-dropdown-title" >{props.title}</div>
                  {open &&
                  
                   <div className='nav-dropdown-items slideIn' ref={ref}> {props.children}</div>}  
