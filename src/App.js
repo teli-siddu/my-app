@@ -6,42 +6,9 @@ import {Responsive} from './components/common/Responsive'
 import "./style.css";
 // import Header from "./components/common/Header";
 const App = () => {
-  console.log(process.env);
   return (
-<<<<<<< HEAD
-    // <Router>
-    
-    //   <Responsive displayIn={["Tablet","Mobile"]}>
-    //     <div className="ss-navbar-container">
-    //       <NavbarContainer />
-    //     </div>
-    //   </Responsive>
-    //   <Responsive displayIn={["Laptop"]}>
-    //     <div className="mm-navbar-container">
-    //       <TopNavbarContainer />
-    //     </div>
-    //   </Responsive>
-
-
-    // </Router>
+   
     <div>Hello</div>
-=======
-    <Router>
-    
-      <Responsive displayIn={["Tablet","Mobile"]}>
-        <div className="ss-navbar-container">
-          <NavbarContainer />
-        </div>
-      </Responsive>
-      <Responsive displayIn={["Laptop"]}>
-        <div className="mm-navbar-container">
-          <TopNavbarContainer />
-        </div>
-      </Responsive>
-
-
-    </Router>
->>>>>>> 481519111f9fd3565d7436a8d1c53a652e256f9a
   );
 };
 
