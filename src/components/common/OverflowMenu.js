@@ -1,13 +1,13 @@
 import React from 'react'
 import classnames from 'classnames';
-import {FaBeer } from 'react-icons/fa'
+import {BiDotsVerticalRounded } from 'react-icons/bi'
 
 export default function OverflowMenu({ children, className, visibilityMap }) {
 
   return (
     <div className={className}>
     <span className="icon-button">
-          <FaBeer  />
+          <BiDotsVerticalRounded  />
     </span>
     {React.Children.map(children, (child) => {
           if (!visibilityMap[child.props["targetId"]]) {
