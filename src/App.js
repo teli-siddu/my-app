@@ -10,20 +10,17 @@ const App = () => {
   return (
     <Router>
     
-      {/* <Responsive displayIn={["Mobile"]}>
+      <Responsive displayIn={["Mobile"]}>
         <div className="ss-navbar-container">
           <NavbarContainer />
         </div>
       </Responsive>
-      <Responsive displayIn={["Mobile","Tablet","Laptop"]}>
+      <Responsive displayIn={["Tablet","Laptop"]}>
         <div className="mm-navbar-container">
               <TopNavbarContainer />
         </div>
-      </Responsive> */}
-      <div className="mm-navbar-container">
-              <TopNavbarContainer />
-        </div>
-    
+      </Responsive>
+     
 
     </Router>
 

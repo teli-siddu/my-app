@@ -26,9 +26,9 @@ import './Navbar.css'
    },[])
     return (
         <Navbar>
-        <NavItem icon={<PlusIcon />}></NavItem>
+        {/* <NavItem icon={<PlusIcon />}></NavItem>
         <NavItem icon={<BellIcon />}></NavItem>
-        <NavItem icon={<MessengerIcon />}></NavItem>
+        <NavItem icon={<MessengerIcon />}></NavItem> */}
         <NavItem icon={<CaretIcon />}>
         <DropdownMenu />
         </NavItem>
