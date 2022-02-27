@@ -5,16 +5,20 @@ export default function IntersectionObserverWrapper({ children }){
     // const classes = useIntersectionStyles();
     const navRef = useRef(null);
     const [visibilityMap, setVisibilityMap] = useState({});
+    const [isOverflow,setIsOverflow]=useState(false);
     const handleIntersection = (entries) => {
       console.log(entries);
+      setIsOverflow(false);
         const updatedEntries = {};
         entries.forEach((entry) => {
           const targetid = entry.target.dataset.targetId;
           // Check if element is visibile within container 
           if (entry.isIntersecting) {
             updatedEntries[targetid] = true;
+           
           } else {
             updatedEntries[targetid] = false;
+            setIsOverflow(true);
           }
         });
         // Overwrite previous state values with current state
@@ -54,11 +58,13 @@ export default function IntersectionObserverWrapper({ children }){
         return x;
       })}
 
-      <OverflowMenu 
+ {
+   isOverflow &&  <OverflowMenu 
       visibilityMap={visibilityMap}
         className="nav-menu-items-overflow">
        {children}
         </OverflowMenu>
+ }
      
     </div>
       );

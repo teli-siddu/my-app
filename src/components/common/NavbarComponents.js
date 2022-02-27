@@ -15,7 +15,13 @@ export const NavItem = (props) => {
     );
   };
 
-
+export const NavDropdownMore=(props)=>{
+  return (
+    <div className={`nav-dropdown ${props.className}`} >
+         {props.children}
+    </div>
+  )
+}
 
 export const NavDropdown=(props)=>{
     const ref = useRef(null)
