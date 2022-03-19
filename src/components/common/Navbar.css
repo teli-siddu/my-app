@@ -1,3 +1,4 @@
+
 .in-visible{
     visibility: hidden;
 }
@@ -25,8 +26,11 @@
     font-size:calc(var(--nav-size)*0.5);
     color: var(--nav-text-color);
 }
+.nav-item.nav-icon-button{
+    border-bottom: none;
+}
 .mm-navbar-container .navbar{
-    height: var(--nav-size);
+    min-height: var(--nav-size);
     background-color: var(--nav-bg);
     padding: 0 1rem;
     border-bottom: var(--border);
@@ -52,7 +56,7 @@
 }
 .mm-navbar-container .nav-dropdown-items{
     position: absolute;
-    top: var(--nav-size);
+    /* top: var(--nav-size); */
     background: #efefef;
     border-radius: 2px;
     
@@ -63,20 +67,26 @@
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both
   }
-.mm-navbar-container .nav-item{
-padding: 1.8rem 1.5rem;
+ .nav-item{
 border-bottom: var(--border);
-width: 25rem;
-
-
+width: var(--nav-item-width);
 }
-.mm-navbar-container .nav-item:hover{
-    background-color: #8b6f4e;
-    color: #fff;
-    }
-    .mm-navbar-container .nav-item:hover a{
-        color: #fff;
+ .nav-item .nav-dropdown-title, .nav-item .nav-link,.nav-dropdown-title{
+    padding: 1.5rem 1.5rem;
+    display: inline-block;
+}
+    /* .nav-dropdown-title{
+        padding: 1.8rem 1.5rem;
+    } */
+.nav-dropdown.in-oveflow .nav-dropdown-items{
+    top: 0;
+right: var(--nav-item-width);
+}
+
+     .nav-item:hover > a,.nav-item:hover  .nav-dropdown-title{
+        color: var(--nav-hover-text-color);
         }
+      
 .mm-navbar-container .nav-dropdown {
     color: var(--nav-text-color);
     padding: 0px calc(var(--nav-size)*0.25);
@@ -99,6 +109,14 @@ position: absolute;
 left:1rem;
 z-index: -1;
 top: -1.4rem;
+}
+.overflow-nav-items .nav-dropdown-items::before{
+    display: none;
+}
+.menu-item:hover, .nav-item:hover,.nav-dropdown-title:hover{
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-text-color);
+    
 }
 @keyframes slideIn {
     0% {
@@ -179,6 +197,9 @@ top: -1.4rem;
 	height: 20px;
 	fill: var(--nav-text-color);
 }
+/* .ss-navbar-container .icon-button:hover svg{
+    fill:var(--nav-hover-text-color)
+} */
 .ss-navbar-container .hamburger-icon{
     display: block;
 }
@@ -187,7 +208,7 @@ top: -1.4rem;
 }
 .ss-navbar-container .dropdown{
     position: absolute;
-    top: 58px;
+    top: var(--nav-size);
     width: 300px;
     transform: translate(-45%);
     background-color: rgb(243, 243, 243);
@@ -195,8 +216,9 @@ top: -1.4rem;
     /* padding: 1rem    z;; */
     /* overflow: hidden; */
     transition: height var(--speed) ease;
-    top: 7rem;
+    
     overflow: hidden;
+    right: -17.8rem;
     
 }
  .ss-navbar-containers .menu-item:hover .triangle::before{
@@ -246,13 +268,10 @@ left: 0;
 hr{
     color: rgba(0, 0, 0, 0.1);
 }
-.ss-navbar-container .menu{
+.menu{
     width: 100%;
 }
-.ss-navbar-container .menu-item:hover{
-    background-color: #525357;
-    color: #fff;
-}
+
 
 /* CSSTransition classes  */
 .menu-primary-enter {

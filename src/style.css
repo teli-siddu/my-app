@@ -2,16 +2,18 @@
     --bg:#fff;
     --bg-accent:#f545;
     --text-color:#000;
-    --nav-size:58px;
+    --nav-size:45px;
     --nav-bg:#fff;
-    --nav-text-color:#8b6f4e;
+    --nav-hover-bg:#525357;
+    --nav-hover-text-color:#fff;
+    --nav-text-color:#000;
     --border:1px solid rgba(0,0,0,.15);
     --border-radius:8px;
     --speed:500ms;
     --link-color:#5c5c5c;
     --link-color-hover:#fff;
     --font-size:10px;
-    
+    --nav-item-width:25rem;
 }
 html{
     /*****

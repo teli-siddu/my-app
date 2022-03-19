@@ -48,7 +48,7 @@ const Navbar = (props) => {
   const NavItem = (props) => {
     const [open, setOpen] = useState(false);
     return (
-      <li className="nav-item">
+      <li className="nav-icon-button">
         <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
           {props.icon}
         </a>
@@ -131,7 +131,7 @@ const Navbar = (props) => {
           <DropdownItem 
         
           rightIcon={<ChevronIcon />}
-          goToMenu='settings'
+          goToMenu='CONTACT US'
           >
             CONTACT US
           </DropdownItem>
@@ -164,6 +164,28 @@ const Navbar = (props) => {
          {/* countertop children */}
          <CSSTransition 
         in={activeMenu ==='DESIGN TOOLS' }
+          timeout={500} 
+          classNames='menu-secondary'
+           unmountOnExit
+           onEnter={calcHeight}
+           >
+        <div className="products-level-1">
+        <DropdownItem goToMenu="LEVEL-1" leftIcon={<ArrowIcon />}>
+           <div className='prev-menu'> <span>  {activeMenu} </span> </div>
+        </DropdownItem>
+          <DropdownItem>FLOORING</DropdownItem> 
+          <DropdownItem>COUNTERTOPS</DropdownItem> 
+          <DropdownItem>BACKSPLASH & WALL TILE</DropdownItem> 
+          <DropdownItem>HARDSCAPING</DropdownItem> 
+          <DropdownItem>SINKS</DropdownItem> 
+          <DropdownItem>FAUCCETS</DropdownItem> 
+          <DropdownItem>NEW PRODUCTS</DropdownItem> 
+          <DropdownItem>PRODUCT SEARCH</DropdownItem>  
+          
+          </div>
+        </CSSTransition>
+        <CSSTransition 
+        in={activeMenu ==='CONTACT US' }
           timeout={500} 
           classNames='menu-secondary'
            unmountOnExit
